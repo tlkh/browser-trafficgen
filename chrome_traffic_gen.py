@@ -20,6 +20,7 @@ chrome_options = Options()
 if CHROME_HEADLESS:
     chrome_options.add_argument("--headless")
 #chrome_options.binary_location = CHROME_BINLOC
+chrome_options.add_argument('--disable-application-cache')
 
 driver = webdriver.Chrome(executable_path=CHROMEDRIVER_BINLOC, chrome_options=chrome_options)
 
