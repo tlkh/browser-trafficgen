@@ -1,36 +1,106 @@
 import numpy as np
 import time
 
+# config - site roots
+
+GOV_ROOT = "http://1.2.3.203/"
+HONEYWELL_ROOT = "http://1.2.3.205/"
+INTRANET_ROOT = "http://1.2.3.149/"
+GITLAB_ROOT = "http://1.2.3.153/"
+
+def rand_sleep():
+    time.sleep(np.random.randint(3, 6)*np.random.rand())
 
 def browse_govsg(driver):
-    """Click around gov.sg site"""
-
     driver.get(GOV_ROOT)
-    time.sleep(np.random.randint(1, 3))
-
-    menu_button = driver.find_element_by_css_selector(
-        "#homemenu_0_DivCode > ul > li:nth-child(6) > a")
-    menu_button.click()
-
-    time.sleep(np.random.randint(1, 3))
-
-    listen_button = driver.find_element_by_css_selector(
-        "#Body > div.introjs-tooltipReferenceLayer > div > div.introjs-tooltipbuttons > a")
-    listen_button.click()
-
-    time.sleep(np.random.randint(1, 3))
-
-    factually = driver.find_element_by_css_selector(
-        "#mainmenu_0_DivCode > ul > li:nth-child(4) > a")
-    factually.click()
-
-    time.sleep(np.random.randint(1, 3))
-
+    rand_sleep()
+    driver.get(GOV_ROOT+"news.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"news/from-the-media/oct-2018/page-1.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"news/this-week-at-gov/oct-2018/page-1.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"news/news/oct-2018/page-1.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually/content/fake-sms-and-website-on-sg-bonus.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually/content/countering-radicalism-together.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually/content/does-our-prime-minister-get-paid-up-to-r.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually/environment.html#listing")
+    rand_sleep()
+    driver.get(GOV_ROOT+"factually/content/why-increase-water-prices.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"resources.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"resources/ecitizen/guides-and-tips-on-government-services.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"sgdi/ministries/index.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"contest/hawkercentres.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"sgdi/ministries/mewr.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"sgdi/ministries/pmo.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"microsites/everydropcounts.html")
+    rand_sleep()
+    driver.get(GOV_ROOT+"microsites/ndr2018.html")
+    rand_sleep()
     driver.get(GOV_ROOT)
-    time.sleep(np.random.randint(1, 3))
+    rand_sleep()
 
-    hawker = driver.find_element_by_css_selector(
-        "#homemenu_0_DivCode > ul > li:nth-child(7) > ul > li > a")
-    hawker.click()
+def browse_honeywell(driver):
+    driver.get(HONEYWELL_ROOT)
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"careers.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"careers/why-choose-honeywell.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"industrial.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"worldwide.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"buildings.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"hrdirect.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"newsroom.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"newsroom/news/2018/09/leap-into-quantum-computing.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT+"newsroom/news/2018/09/how-technology-is-keeping-schools-safe.html")
+    rand_sleep()
+    driver.get(HONEYWELL_ROOT)
+    rand_sleep()
+    
+def browse_intranet(driver):
+    driver.get(INTRANET_ROOT)
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"index.php/blog/")
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"index.php/2018/11/08/annual_report_2018/")
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"index.php/operations/")
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"index.php/staff-services/")
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"index.php/office-addresses-floor-plans-maps/")
+    rand_sleep()
+    driver.get(INTRANET_ROOT+"wp-admin")
+    rand_sleep()
+    driver.get(INTRANET_ROOT)
+    rand_sleep()
 
-    time.sleep(np.random.randint(1, 3))
+def browse_gitlab(driver):
+    driver.get(GITLAB_ROOT)
+    rand_sleep()
+    driver.get(GITLAB_ROOT+"users/password/new")
+    rand_sleep()
+    driver.get(GITLAB_ROOT)
+    rand_sleep()
+    
+    
