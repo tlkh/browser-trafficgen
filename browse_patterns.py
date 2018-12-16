@@ -7,9 +7,31 @@ GOV_ROOT = "http://gov.edu/"
 HONEYWELL_ROOT = "http://honeywell.edu/"
 INTRANET_ROOT = "http://intra.zycron.edu/"
 GITLAB_ROOT = "http://gitlab.zycron.edu/"
+CNA_ROOT = "http://channelnewsasia.edu/"
+WIKI_ROOT = "http://wiki.zycron.edu/"
 
 def rand_sleep():
-    time.sleep(np.random.randint(3, 12)*np.random.rand()+1)
+    time.sleep(np.random.randint(5, 15)*np.random.rand()+1)
+
+def browse_cna(driver):
+    driver.get(CNA_ROOT)
+    rand_sleep()
+    driver.get(CNA_ROOT+"news/singapore/prime-minister-succession-ong-ye-kung-pap-cec-committee-10918764.html")
+    rand_sleep()
+    driver.get(CNA_ROOT+"news/singapore/singapore-invisible-people-in-class-conscious-society-10918552.html")
+    rand_sleep()
+    driver.get(CNA_ROOT+"news/asia/mother-malaysia-baby-dies-caretaker-husband-rape-10920150.html")
+    rand_sleep()
+    driver.get(CNA_ROOT+"news/business/self-driving-shuttle-bus-nus-trial-comfortdelgro-2019-10920352.html")
+    rand_sleep()
+
+def browse_wiki(driver):
+    driver.get(WIKI_ROOT)
+    rand_sleep()
+    driver.get(WIKI_ROOT+"doku.php?id=start&do=index")
+    rand_sleep()
+    driver.get(WIKI_ROOT+"doku.php?id=start&do=login&sectok=")
+    rand_sleep()
 
 def browse_govsg(driver):
     driver.get(GOV_ROOT)
@@ -56,25 +78,21 @@ def browse_govsg(driver):
 def browse_honeywell(driver):
     driver.get(HONEYWELL_ROOT)
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"careers.html")
+    driver.get(HONEYWELL_ROOT+"www.honeywell.com/safety.html")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"careers/why-choose-honeywell.html")
+    driver.get(HONEYWELL_ROOT+"investor.honeywell.com/index.html")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"industrial.html")
+    driver.get(HONEYWELL_ROOT+"investor.honeywell.com/file/Index5869.html?KeyFile=395705302")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"worldwide.html")
+    driver.get(HONEYWELL_ROOT+"investor.honeywell.com/Cache/1500113911fb5d.pdf?KeyFile=1500113911")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"buildings.html")
+    driver.get(HONEYWELL_ROOT+"investor.honeywell.com/Cache/1500113912b329.pdf?KeyFile=1500113912")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"hrdirect.html")
+    driver.get(HONEYWELL_ROOT+"investor.honeywell.com/Cache/395407973.pdf?KeyFile=395407973&Output=3&OSID=9")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"newsroom.html")
+    driver.get(HONEYWELL_ROOT+"www.honeywell.com/hrdirect.html")
     rand_sleep()
-    driver.get(HONEYWELL_ROOT+"newsroom/news/2018/09/leap-into-quantum-computing.html")
-    rand_sleep()
-    driver.get(HONEYWELL_ROOT+"newsroom/news/2018/09/how-technology-is-keeping-schools-safe.html")
-    rand_sleep()
-    driver.get(HONEYWELL_ROOT)
+    driver.get(HONEYWELL_ROOT+"www.honeywell.com/industrial.html")
     rand_sleep()
     
 def browse_intranet(driver):
