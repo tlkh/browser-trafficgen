@@ -11,8 +11,7 @@ from browse_patterns import *
 CHROME_HEADLESS = False
 #CHROME_BINLOC = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 CHROMEDRIVER_BINLOC = "./chromedriver_linux"
-
-GOV_ROOT = "file:///Users/timothy/Desktop/cybercity/govsg/index.html"
+#CHROMEDRIVER_BINLOC = "C:\chromedriver.exe"
 
 # initialise ChromeDriver
 

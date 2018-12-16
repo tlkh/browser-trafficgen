@@ -3,13 +3,13 @@ import time
 
 # config - site roots
 
-GOV_ROOT = "http://1.2.3.203/"
-HONEYWELL_ROOT = "http://1.2.3.205/"
-INTRANET_ROOT = "http://1.2.3.149/"
-GITLAB_ROOT = "http://1.2.3.153/"
+GOV_ROOT = "http://gov.edu/"
+HONEYWELL_ROOT = "http://honeywell.edu/"
+INTRANET_ROOT = "http://intra.zycron.edu/"
+GITLAB_ROOT = "http://gitlab.zycron.edu/"
 
 def rand_sleep():
-    time.sleep(np.random.randint(3, 6)*np.random.rand())
+    time.sleep(np.random.randint(3, 12)*np.random.rand()+1)
 
 def browse_govsg(driver):
     driver.get(GOV_ROOT)
