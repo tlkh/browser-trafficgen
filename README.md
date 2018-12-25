@@ -1,2 +1,3 @@
-# network-traffic-visualiser
-Python-based network traffic capture and visualisation
+# browser-trafficgen
+
+Realistic browser-based traffic generation with Python
